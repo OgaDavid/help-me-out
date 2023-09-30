@@ -32,6 +32,12 @@ To install and run Next.js Chrome Extension Starter locally, follow these steps:
    cd help-me-out
    ```
 
+3. Open in vscode:
+
+   ```
+   code .
+   ```
+
 
 ## Add Extension To Chrome 🔥
 
