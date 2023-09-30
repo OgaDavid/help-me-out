@@ -6,14 +6,15 @@ Screen Recording extension built with HTML, CSS and JavaScript.
 
 - [Description](#description)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
 - [License](#license)
 
 # Description
 
 This extension helps you record and share help videos with ease.
-![Preview](Screen1.png)
+<br />
+<br />
+
+<img src="https://github.com/OgaDavid/help-me-out/assets/104001201/060c7a97-9112-4c9d-90aa-ebe25b692fd2" alt="preview"/>
 
 # Installation
 
@@ -42,8 +43,10 @@ To install and run Next.js Chrome Extension Starter locally, follow these steps:
 
 4. The Chrome Extension Starter should now be loaded as an unpacked extension in Google Chrome.
 
-![Preview](screen2.png)
+<br />
+<br />
 
+<img src="https://github.com/OgaDavid/help-me-out/assets/104001201/80bdb188-2bd0-4986-9b47-5aedd28e9b51" alt="preview" />
 
 # License
 
