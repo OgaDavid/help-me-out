@@ -1,8 +1,7 @@
 console.log("hello from content.js");
 
 var recorder = null;
-function onAccessApproved(stream) {
-
+function recordingApproved(stream) {
   recorder = new MediaRecorder(stream);
 
   recorder.start();
@@ -16,7 +15,6 @@ function onAccessApproved(stream) {
   };
 
   recorder.ondataavailable = function (blob) {
-
     let recorderBlob = blob.data;
     let url = URL.createObjectURL(recorderBlob);
 
@@ -38,6 +36,7 @@ function onAccessApproved(stream) {
   };
 }
 
+
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.action === "start_recording") {
     console.log("start recording");
@@ -53,19 +52,19 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         },
       })
       .then((stream) => {
-        onAccessApproved(stream);
+        recordingApproved(stream);
       });
   }
 
-    if (message.action === "stop_recording") {
-        console.log("stop recording");
-    
-        sendResponse(`processed: ${message.action}`);
-    
-        if(!recorder) {
-            return console.log("no recorder")
-        }
+  if (message.action === "stop_recording") {
+    console.log("stop recording");
 
-        recorder.stop();
+    sendResponse(`processed: ${message.action}`);
+
+    if (!recorder) {
+      return console.log("no recorder");
     }
+
+    recorder.stop();
+  }
 });
